@@ -15,3 +15,7 @@ A comunicação entre os sensores e o Home Assintent deverá ocorrer via RabbitM
 A comunicação entre os atuadores e o Home Assistent, por sua vez, deverá ocorrer via gRPC, usando o paradigma Client/Server, onde o Home Assistent se comportará como Client e cada  atuador como Server. Ainda no exemplo anterior, considere uma lâmpada inteligente com duas possíveis ações: ligar ou desligar. A lâmpada então deverá oferecer uma interface de invocação remota com dois métodos: _ligarLampada()_ e _desligarLampada()_. Dessa forma, o Home Assistent poderá atuar no ambiente através da invocação remota desses métodos, por exemplo, se ele desejar ligar uma determinada lâmpada, ele deve invocar, via gRPC, o método _ligarLampada_.
 
 O HomeAssistent também deverá se comportar como um servidor para uma aplicação cliente que permita ao usuário interagir com o ambiente. Através dessa aplicação (que poderá ser Desktop, Web ou Mobile), o usuário poderá receber as informações de momento do ambiente (por exemplo, o nível de luminosidade detectado por cada sensor) e também poderá agir sobre ele (por exemplo, ligando ou desligando uma lâmpada). A Figura abaixo resume a arquitetura do ambiente a ser simulado.
+
+# Arquitetura
+
+![arquitetura do projeto](imagens/arquitetura.jpg)
